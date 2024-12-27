@@ -1,14 +1,25 @@
 #root {
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #fff;
+  background-color:#101010;
+  color: #FFFFFF;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 
+.main-content {
+  margin-top: 80px; 
+  padding: 0 20px;
+}
+
+#home,
+#about,
+#projects,
+#contact {
+  scroll-margin-top: 80px;
+}
 

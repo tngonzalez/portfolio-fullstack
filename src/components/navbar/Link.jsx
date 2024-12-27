@@ -1,19 +1,16 @@
 import PropTypes from "prop-types";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Link = ({ page, label }) => {
   return (
-    <AnchorLink
+    <a
       href={`#${page}`}
       style={{
         textDecoration: "none",
         color: "inherit",
-        margin: "0 1rem",
-        cursor: "pointer",
       }}
     >
       {label}
-    </AnchorLink>
+    </a>
   );
 };
 

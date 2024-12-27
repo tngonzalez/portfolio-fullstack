@@ -12,14 +12,17 @@ import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 
 const Navbar = () => {
-  //Permite actualizar el titulo del NavBar según el tamaño de pantalla
-  const [navTitle, setNavTitle] = useState("<Tylinn González/>");
+  //Menú móvil
+  const [mobileOpen, setMobileOpen] = useState(false);
+  //Controlar la visibilidad del menú de escritorio
+  const [isDesktopMenuVisible, setIsDesktopMenuVisible] = useState(true);
+
   useEffect(() => {
     const updateTitle = () => {
-      if (window.innerWidth <= 768) {
-        setNavTitle("<TG/>");
+      if (window.innerWidth <= 460) {
+        setIsDesktopMenuVisible(false);
       } else {
-        setNavTitle("<Tylinn González/>");
+        setIsDesktopMenuVisible(true);
       }
     };
 
@@ -29,28 +32,26 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", updateTitle);
   }, []);
 
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   //Mobile Drawer
   const drawer = (
-      <div className="nav-link-small" >
-        <div className="nav-link">
-          <Link page="home" label="home" />
-        </div>
-        <div className="nav-link">
-          <Link page="about" label="about" />
-        </div>
-        <div className="nav-link">
-          <Link page="projects" label="projects" />
-        </div>
-        <div className="nav-link">
-          <Link page="contact" label="contact" />
-        </div>
+    <div className="nav-link-small">
+      <div className="nav-link">
+        <Link page="home" label="home" />
       </div>
+      <div className="nav-link">
+        <Link page="about" label="about" />
+      </div>
+      <div className="nav-link">
+        <Link page="projects" label="projects" />
+      </div>
+      <div className="nav-link">
+        <Link page="contact" label="contact" />
+      </div>
+    </div>
   );
 
   return (
@@ -59,10 +60,9 @@ const Navbar = () => {
       <AppBar className="nav">
         <Toolbar className="nav-container">
           <Typography
-            className="nav-brand"
-            sx={{ fontSize: 20, cursor: "pointer", fontWeight: "bold" }}
+            sx={{ fontSize: 25, cursor: "pointer", fontFamily: "monospace",  fontWeight: "bolder"}}
           >
-            {navTitle}
+            <Link page={"home"} label={"<TG/>"}/>
           </Typography>
 
           {/* Icon Menu Responsivo */}
@@ -75,45 +75,53 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-
-          <div className="nav-link-container" style={{display: window.innerWidth <= 425 ? 'none' : 'flex'}}>
-            <div className="nav-link">
-              <Link page="home" label="home" />
+          {/* Desktop Menu */}
+          {
+            isDesktopMenuVisible && (
+              <div
+              className="nav-link-container"
+              >
+              <div className="nav-link">
+                <Link page="home" label="home" />
+              </div>
+              <div className="nav-link">
+                <Link page="about" label="about" />
+              </div>
+              <div className="nav-link">
+                <Link page="projects" label="projects" />
+              </div>
+              <div className="nav-link">
+                <Link page="contact" label="contact" />
+              </div>
             </div>
-            <div className="nav-link">
-              <Link page="about" label="about" />
-            </div>
-            <div className="nav-link">
-              <Link page="projects" label="projects" />
-            </div>
-            <div className="nav-link">
-              <Link page="contact" label="contact" />
-            </div>
-          </div>
+            )}
         </Toolbar>
       </AppBar>
 
       <nav>
         <Drawer
-        variant="temporary"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true,
-        }}
-        sx={{
-          "& .MuiDrawer-paper": {
-            width: 200,
-            backgroundColor: "#0F2027",
-            color: "white", 
-            padding: "5px",
-          },
-        }}>
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            "& .MuiDrawer-paper": {
+              width: 200,
+              backgroundColor: "#1a1e24",
+              background:"#1a1e24 !important",
+              color: "white",
+              padding: "10px",
+              
+            },
+          }}
+        >
           {drawer}
         </Drawer>
       </nav>
     </Box>
   );
-}
+};
 
 export default Navbar;
