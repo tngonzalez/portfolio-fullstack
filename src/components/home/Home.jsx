@@ -9,6 +9,7 @@ export function Home() {
       <div className="text-container">
         <h1>Tylinn González</h1>
         <h2 className="typing">Fullstack Developer</h2>
+        
       </div>
     </section>
   );

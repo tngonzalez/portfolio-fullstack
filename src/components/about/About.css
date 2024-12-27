@@ -1,15 +1,25 @@
 #about {
   min-height: 90vh;
-  flex-wrap: wrap;
   margin: 0 40px;
-}
-h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 p {
   text-align: justify;
   font-size: 20px;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.about-info {
+  text-align: left;
+  max-width: 50%;
+}
+.tech-stack {
+    max-width: 50%;
 }
 
 .waving-hand {
@@ -44,5 +54,139 @@ p {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+.gradient {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 12px;
+  padding: 14px 30px 14px 30px;
+  border-radius: 0.7em;
+  background: -webkit-linear-gradient(
+      225deg,
+      rgb(251, 21, 242),
+      rgb(21, 198, 251)
+    )
+    0% 0% / 300% 300%;
+  background-size: 200% auto;
+  -webkit-animation: gradient_move 3s ease infinite;
+  animation: gradient_move 3s ease infinite;
+}
+
+@-webkit-keyframes gradient_move {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
+@keyframes gradient_move {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+
+@mixin centerFlex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin createButton(
+  $width,
+  $height,
+  $radius,
+  $gradientFirst,
+  $gradientThird,
+  $shadowColor
+) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-image: linear-gradient(
+    135deg,
+    $gradientFirst 0%,
+    $gradientThird 100%
+  );
+  box-shadow: 0 20px 30px -6px $shadowColor;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.info {
+  @include centerFlex;
+  height: 90vh;
+  h1 {
+    background: linear-gradient(to right, #fec163 0%, #de4313 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gradient {
+    transition: all 0.3s ease-in-out;
+    &:nth-child(2) {
+      @include createButton(
+        150px,
+        60px,
+        50px,
+        #e2b0ff,
+        #9f44d3,
+        rgba(171, 88, 219, 0.5)
+      );
+    }
+    &:nth-child(3) {
+      @include createButton(
+        150px,
+        60px,
+        50px,
+        #81fbb8,
+        #28c76f,
+        rgba(60, 211, 128, 0.5)
+      );
+    }
+    &:nth-child(4) {
+      @include createButton(
+        150px,
+        60px,
+        50px,
+        #abdcff,
+        #0396ff,
+        rgba(30, 161, 255, 0.5)
+      );
+    }
+    &:nth-child(5) {
+      @include createButton(
+        150px,
+        60px,
+        50px,
+        #feb692,
+        #ea5455,
+        rgba(238, 103, 97, 0.5)
+      );
+    }
+    &:hover {
+      transform: translatey(10px);
+      box-shadow: none;
+    }
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
