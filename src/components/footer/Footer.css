@@ -1,0 +1,9 @@
+.footer {
+  width: 100%;
+  background: #1a1e24 !important;
+  box-shadow: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
+  border-top: 1px solid #b200b2;
+  padding: 5px 0;
+}

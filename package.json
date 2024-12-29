@@ -15,6 +15,7 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
     "@mui/styled-engine-sc": "^6.3.0",
+    "emailjs-com": "^3.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",

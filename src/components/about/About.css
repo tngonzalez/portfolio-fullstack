@@ -1,6 +1,6 @@
 #about {
-  min-height: 90vh;
-  margin: 0 40px;
+  max-height: 90vh;
+  margin: 40px 90px;
 }
 
 p {
@@ -10,16 +10,14 @@ p {
 
 .info {
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 70px;
 }
 
-.about-info {
+.about-info,
+.tech-stack {
   text-align: left;
   max-width: 50%;
-}
-.tech-stack {
-    max-width: 50%;
+  height: fit-content;
 }
 
 .waving-hand {
@@ -28,6 +26,12 @@ p {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+.styleName {
+  color: #b429b4;
+  font-style: italic;
+  transition: all 0.8s ease;
 }
 
 @keyframes wave-animation {
@@ -57,12 +61,39 @@ p {
   }
 }
 
+a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Animación de parpadeo (aumento y disminución de tamaño) */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.iconSpeaker {
+  margin: 0 20px;
+  color: #b429b4;
+  animation: pulse 2.5s infinite ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.iconSpeaker:hover {
+  box-shadow: 0 0 15px 5px rgba(180, 41, 180, 0.5);
+  border-radius: 10px;
+}
+
 .gradient {
-  color: white;
   font-weight: 600;
   font-size: 14px;
   margin: 12px;
-  padding: 14px 30px 14px 30px;
+  padding: 14px 20px;
   border-radius: 0.7em;
   background: -webkit-linear-gradient(
       225deg,
@@ -131,62 +162,62 @@ p {
   color: white;
 }
 
-.info {
-  @include centerFlex;
-  height: 90vh;
-  h1 {
-    background: linear-gradient(to right, #fec163 0%, #de4313 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+/* Responsividad */
+@media (max-width: 1100px) {
+  #about {
+    margin: 0 20px;
+    padding-bottom: 100px;
+    min-height: fit-content;
   }
-  .gradient {
-    transition: all 0.3s ease-in-out;
-    &:nth-child(2) {
-      @include createButton(
-        150px,
-        60px,
-        50px,
-        #e2b0ff,
-        #9f44d3,
-        rgba(171, 88, 219, 0.5)
-      );
-    }
-    &:nth-child(3) {
-      @include createButton(
-        150px,
-        60px,
-        50px,
-        #81fbb8,
-        #28c76f,
-        rgba(60, 211, 128, 0.5)
-      );
-    }
-    &:nth-child(4) {
-      @include createButton(
-        150px,
-        60px,
-        50px,
-        #abdcff,
-        #0396ff,
-        rgba(30, 161, 255, 0.5)
-      );
-    }
-    &:nth-child(5) {
-      @include createButton(
-        150px,
-        60px,
-        50px,
-        #feb692,
-        #ea5455,
-        rgba(238, 103, 97, 0.5)
-      );
-    }
-    &:hover {
-      transform: translatey(10px);
-      box-shadow: none;
-    }
-    &:active {
-      opacity: 0.5;
-    }
+
+  .info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-info,
+  .tech-stack {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 780px) {
+  #about {
+    margin: 0 20px;
+    padding-bottom: 100px;
+    min-height: fit-content;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-info,
+  .tech-stack {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    margin: 0 10px;
+    padding-bottom: 80px;  
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 20px; 
+    justify-content: flex-start; 
+    text-align: center;
+  }
+
+  .about-info,
+  .tech-stack {
+    max-width: 100%;
+    padding: 0 10px; 
   }
 }
