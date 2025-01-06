@@ -70,6 +70,7 @@ export function Contact() {
             color="secondary"
             focused
             sx={{
+              color: "white",
               input: { color: "white" }, 
               label: { color: "white" },
               "& .MuiOutlinedInput-root": {
@@ -139,7 +140,7 @@ export function Contact() {
         </form>
 
         <div className="socialNet">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/tngonzalez" target="_blank" rel="noopener noreferrer">
             <GitHubIcon style={{ fontSize: 60 }} />
           </a>
           <a href="https://www.linkedin.com/in/tylinngonzalez/">
