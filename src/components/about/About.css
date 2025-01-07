@@ -1,5 +1,5 @@
 #about {
-  max-height: 90vh;
+  min-height: 90vh;
   margin: 40px 90px;
 }
 
@@ -63,10 +63,9 @@ p {
 
 a {
   color: #fff;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-/* Animación de parpadeo (aumento y disminución de tamaño) */
 @keyframes pulse {
   0%,
   100% {

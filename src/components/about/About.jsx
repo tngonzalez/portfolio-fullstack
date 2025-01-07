@@ -36,13 +36,11 @@ export function About() {
             experience by working on diverse software projects, both
             independently and as part of collaborative teams. My expertise lies
             in designing and building scalable, efficient, and user-centric web
-            applications. My primary focus is on backend development, where I
-            thrive on solving complex problems, optimizing performance, and
-            crafting robust systems.
+            applications.
           </p>
 
-          <button className="gradient ">
-            <a href="#contact">Let&apos;s Connect</a>
+          <button className="gradient">
+            <a href="/Tylinn Gonzalez - CV.pdf">Download my CV</a>
           </button>
         </div>
 

@@ -38,7 +38,7 @@ export function Contact() {
     try {
       await emailjs.send(
         "service_fzaebdn",
-        "template_i6hnnqj", 
+        "template_i6hnnqj",
         templateParams,
         "FSWpBYYlXduYu3Hyq"
       );
@@ -54,11 +54,8 @@ export function Contact() {
 
   return (
     <section id="contact">
-      <h1 style={{ textAlign: "left" }}>
-        <span style={{ color: "#b429b4", fontStyle: "italic", fontWeight: "bold" }}>
-          Contact
-        </span>{" "}
-        me
+      <h1 className="title">
+          Contact <span style={{color: "#b429b4", fontStyle: "italic" }}>me</span>
       </h1>
       <div className="info">
         <form className="formContact" onSubmit={handleSubmit}>
@@ -71,17 +68,17 @@ export function Contact() {
             focused
             sx={{
               color: "white",
-              input: { color: "white" }, 
+              input: { color: "white" },
               label: { color: "white" },
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
-                  borderColor: "white", 
+                  borderColor: "white",
                 },
                 "&:hover fieldset": {
-                  borderColor: "#b429b4", 
+                  borderColor: "#b429b4",
                 },
                 "&.Mui-focused fieldset": {
-                  borderColor: "#b429b4", 
+                  borderColor: "#b429b4",
                 },
               },
             }}
@@ -94,23 +91,23 @@ export function Contact() {
             color="secondary"
             focused
             sx={{
-              input: { color: "white" }, 
+              input: { color: "white" },
               label: { color: "white" },
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
-                  borderColor: "white", 
+                  borderColor: "white",
                 },
                 "&:hover fieldset": {
-                  borderColor: "#b429b4", 
+                  borderColor: "#b429b4",
                 },
                 "&.Mui-focused fieldset": {
-                  borderColor: "#b429b4", 
+                  borderColor: "#b429b4",
                 },
               },
             }}
           />
           <TextField
-            label="Detail"
+            label="Message"
             name="detail"
             value={formData.detail}
             onChange={handleChange}
@@ -119,14 +116,14 @@ export function Contact() {
             focused
             color="secondary"
             sx={{
-              input: { color: "white" }, 
+              textarea: { color: "white" }, 
               label: { color: "white" },
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
-                  borderColor: "white", 
+                  borderColor: "white",
                 },
                 "&:hover fieldset": {
-                  borderColor: "#b429b4", 
+                  borderColor: "#b429b4",
                 },
                 "&.Mui-focused fieldset": {
                   borderColor: "#b429b4", 
@@ -134,13 +131,20 @@ export function Contact() {
               },
             }}
           />
+
           <button type="submit" disabled={isSending}>
             {isSending ? "Sending..." : "Submit"}
           </button>
         </form>
 
         <div className="socialNet">
-          <a href="https://github.com/tngonzalez" target="_blank" rel="noopener noreferrer">
+          <h1 style={{fontStyle: "italic" }}>Let&apos;s Connect !</h1>
+
+          <a
+            href="https://github.com/tngonzalez"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GitHubIcon style={{ fontSize: 60 }} />
           </a>
           <a href="https://www.linkedin.com/in/tylinngonzalez/">
