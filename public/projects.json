@@ -1,0 +1,25 @@
+[
+    {
+        "title": "GYM Management System",
+        "description": "It's a management system designed and developed in C# to provide an optimal experience in tracking routines, weight progress and user management in a modern gym environment. This intuitive and efficient system allows users, trainers and administrators to optimize their time and maximize training results.",
+        "technologies": ["C#", "SQL Server", "Log4Net", "Reporting Service", "QR Code"],
+        "images": [
+            "images/gym1.png",
+            "images/gym2.png",
+            "images/gym3.png",
+            "images/gym4.png",
+            "images/gym5.png",
+            "images/gym6.png",
+            "images/gym7.png"
+        ]
+    },
+    {
+        "title": "System of managing files and booking medical appointments",
+        "description": "",
+        "technologies": ["PHP", "ReactJS", "MySQL"],
+        "images": [
+            "images/gym7.png"
+        ]
+        
+    }
+]

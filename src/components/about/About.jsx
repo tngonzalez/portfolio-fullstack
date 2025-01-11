@@ -1,25 +1,28 @@
 import { useState } from "react";
 import "./About.css";
-import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
+import VolumeUpOutlinedIcon from "@mui/icons-material/VolumeUpOutlined";
 
 export function About() {
-
-  const[styleTitle, setStyle] = useState(false); 
+  const [styleTitle, setStyle] = useState(false);
 
   const onClick = () => {
-    setStyle(!styleTitle); 
+    setStyle(!styleTitle);
 
-    const audio = new Audio('/Test1.mp4');
-    audio.play(); 
-  }
+    const audio = new Audio("/Test1.mp4");
+    audio.play();
+  };
 
   return (
     <section id="about">
       <h1 style={{ textAlign: "left", letterSpacing: "5px", fontSize: "60px" }}>
         Hi <span style={{ color: "#b429b4", fontStyle: "italic" }}>there</span>!
-        <span className="waving-hand">👋</span> 
-        I&apos;m <span className={styleTitle ? "styleName" : ""}>Tylinn</span>. 
-        <VolumeUpOutlinedIcon className="iconSpeaker" fontSize="large" onClick={onClick} />
+        <span className="waving-hand">👋</span>
+        I&apos;m <span className={styleTitle ? "styleName" : ""}>Tylinn</span>.
+        <VolumeUpOutlinedIcon
+          className="iconSpeaker"
+          fontSize="large"
+          onClick={onClick}
+        />
       </h1>
 
       <div className="info">
@@ -40,7 +43,9 @@ export function About() {
           </p>
 
           <button className="gradient">
-            <a href="/Tylinn Gonzalez - CV.pdf">Download my CV</a>
+            <a href="/Tylinn_Gonzalez_CV.pdf" download="Tylinn_Gonzalez_CV.pdf">
+              Download my CV
+            </a>
           </button>
         </div>
 

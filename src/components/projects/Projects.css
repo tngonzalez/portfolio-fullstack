@@ -1,6 +1,14 @@
 #projects {
-    min-height: 90vh;
-    letter-spacing: 2px;
-    margin: 40px 90px;
-  }
-  
+  min-height: 80vh;
+  letter-spacing: 2px;
+  margin: 20px 90px;
+}
+
+.title {
+  text-align: left;
+  font-size: 60px;
+}
+
+.projects-container{
+  display: flex;
+}

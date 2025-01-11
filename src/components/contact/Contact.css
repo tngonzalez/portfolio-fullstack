@@ -70,6 +70,12 @@
       .socialNet {
         display: block;
       }
+
+      .title {
+        text-align: left;
+        font-size: 60px;
+      }
+      
   }
   
   @media (max-width: 768px) {
@@ -82,7 +88,7 @@
     .socialNet {
       width: 100%;
     }
-
+    
   }
   
   @media (max-width: 480px) {
