@@ -10,5 +10,20 @@
 }
 
 .projects-container{
-  display: flex;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+  margin:0;
+  height: auto;
+  align-items:center;
+  align-content:center;
+}
+
+.btn-images:hover{
+  background-color: #6f0b6f;
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-style: italic;
+  color: "#ffffff";
+
 }
