@@ -43,7 +43,7 @@
   },
   {
     "title": "ASOMET - Collaborative Development",
-    "github": "",
+    "github": "https://github.com/LSElias/ASOMET",
     "description": "",
     "technologies": ["Prisma", "NodeJS", "Angular", "Tailwind", "MySQL"],
     "images": ["images/sc1.png"]
