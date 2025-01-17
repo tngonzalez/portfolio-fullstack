@@ -25,5 +25,10 @@
   letter-spacing: 5px;
   font-style: italic;
   color: "#ffffff";
+}
 
+.imgCode {
+  display: inline-block;
+  margin-left: 15px;
+  padding-top: 10px;
 }

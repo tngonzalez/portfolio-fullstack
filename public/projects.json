@@ -22,9 +22,15 @@
   {
     "title": "System for File Management and Medical Appointment Booking",
     "github": "https://github.com/tngonzalez/Clinica-Mia",
-    "description": "",
+    "description": "This web application was designed to manage both medical and personal records, enabling users to efficiently schedule medical appointments and manage the different areas of the clinic. The system provides an intuitive interface for both patients and medical staff, enhancing operational efficiency and improving the overall user experience.",
     "technologies": ["PHP", "ReactJS", "MySQL"],
-    "images": ["images/cm1.png"]
+    "images": [
+      "images/cm1.png",
+      "images/cm2.png",
+      "images/cm3.png",
+      "images/cm5.png",
+      "images/cm6.png"
+    ]
   },
   {
     "title": "Integral System for Managing the FTTH Service",
@@ -42,17 +48,31 @@
     ]
   },
   {
-    "title": "ASOMET - Collaborative Development",
+    "title": "System for Managing Events and Reports",
     "github": "https://github.com/LSElias/ASOMET",
-    "description": "",
+    "description": "This project consisted of a system designed to manage events, user information and their reports. The main objective of this system was to provide detailed information about the event confirmations and absences. It also allowed for the analysis of participation rates through specific and graphical reports. In this project, I took on the role of the backend leader which involved designing and implementing the business logic, including advance queries for personalized reports. Addicionally, I coordinated and managed team goals to ensure the proper execution of each module within the established timelines.",
     "technologies": ["Prisma", "NodeJS", "Angular", "Tailwind", "MySQL"],
-    "images": ["images/sc1.png"]
+    "images": [
+      "images/aso1.png",
+      "images/aso12.png",
+      "images/aso13.png",
+      "images/aso14.png",
+      "images/aso2.png",
+      "images/aso3.png"
+  ]
   },
   {
-    "title": "Eco-Currency Management System - Collaborative Development",
-    "github": "",
+    "title": "Eco-Currency Management System",
+    "github": "https://github.com/LSElias/GreenWallet",
     "description": "",
     "technologies": ["TypeScript", "Prisma", "NodeJS", "Material UI", "MySQL"],
-    "images": ["images/sc1.png"]
+    "images": [
+      "images/gw1.png",
+      "images/gw2.png",
+      "images/gw3.png",
+      "images/gw4.png",
+      "images/gw5.png",
+      "images/gw6.png"
+    ]
   }
 ]

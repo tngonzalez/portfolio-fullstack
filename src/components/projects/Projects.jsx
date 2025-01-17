@@ -56,8 +56,9 @@ export function Projects() {
 
   return (
     <section id="projects">
-      <h1 className="title">Projects</h1>
-
+      <h1 className="title">Projects 
+        <img className="imgCode" src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width ="70" />
+      </h1>
       <div className="projects-container">
         {projects.map((project, index) => (
           <Card
@@ -155,7 +156,7 @@ export function Projects() {
               {selectedProject.description}
             </Typography>
             
-            <Typography sx={{ mb: 2}}>
+            <Typography sx={{ mb: 2, fontStyle: "italic", fontWeight: "bold"}}>
               {selectedProject.technologies.join(" - ")}
             </Typography>
 
