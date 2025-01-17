@@ -43,7 +43,6 @@
       "images/sc3.png",
       "images/sc4.png",
       "images/sc5.png",
-      "images/sc6.png",
       "images/sc7.png"
     ]
   },
@@ -64,7 +63,7 @@
   {
     "title": "Eco-Currency Management System",
     "github": "https://github.com/LSElias/GreenWallet",
-    "description": "",
+    "description": "This system was designed to manage eco-friendly branches with operating hours, materials for redemption, and a rewards program. Users can collect points by presenting various recyclable materials and then redeem them for different rewards available within the system. I was responsible for developing the backend, which involved designing and implementing the business logic, including the management of user points, material tracking, and reward redemption. Additionally, I collaborated in certain areas of the frontend to ensure seamless integration between the backend and the user interface.",
     "technologies": ["TypeScript", "Prisma", "NodeJS", "Material UI", "MySQL"],
     "images": [
       "images/gw1.png",

@@ -62,6 +62,7 @@ export function Projects() {
       <div className="projects-container">
         {projects.map((project, index) => (
           <Card
+            className="cardInfo"
             key={index}
             sx={{
               maxWidth: 300,
@@ -141,7 +142,7 @@ export function Projects() {
               textColor="inherit"
               sx={{
                 fontWeight: "bolder",
-                mb: 5,
+                mb: 3,
                 textAlign: "center",
                 fontSize: "20px",
               }}
@@ -151,7 +152,7 @@ export function Projects() {
             <Typography
               id="modal-desc"
               textColor="text.tertiary"
-              sx={{ mb: 5, textAlign: "justify" }}
+              sx={{ mb: 3, textAlign: "justify" }}
             >
               {selectedProject.description}
             </Typography>
@@ -167,8 +168,7 @@ export function Projects() {
                 variant="solid"
                 sx={{
                   textTransform: "none",
-                  mb: 3,
-                  mt: 2,
+                  mb: 1,
                   fontWeight: "bold",
                   background: "#b429b4",
                   color: "#ffffff",

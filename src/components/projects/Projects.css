@@ -1,34 +1,134 @@
 #projects {
   min-height: 80vh;
   letter-spacing: 2px;
-  margin: 20px 90px;
+  margin: 20px auto;
+  padding: 1rem;
+  max-width: 1200px;
 }
 
-.title {
-  text-align: left;
-  font-size: 60px;
-}
-
-.projects-container{
-  display:flex;
-  flex-flow:row wrap;
-  justify-content:center;
-  margin:0;
-  height: auto;
-  align-items:center;
-  align-content:center;
-}
-
-.btn-images:hover{
+.btn-images:hover {
   background-color: #6f0b6f;
   font-weight: bold;
   letter-spacing: 5px;
   font-style: italic;
-  color: "#ffffff";
+  color: #ffffff; /* Sin comillas */
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Estilo para las tarjetas */
+.MuiCard-root, .cardInfo {
+  max-width: 300px;
+  width: 100%;
+  margin: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Estilo para las tarjetas */
+.MuiCard-root, .cardInfo {
+  max-width: 300px;
+  width: 100%;
+  max-height: 400px; /* Define la altura máxima visible */
+  margin: 0.5rem;
+  box-sizing: border-box;
+  overflow-y: auto; /* Habilita el scroll vertical */
+  padding: 1rem;
+  border: 1px solid #ddd; /* Opcional: Añade un borde para mayor claridad */
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Estilo opcional para personalizar el scroll */
+.MuiCard-root::-webkit-scrollbar, .cardInfo::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+.MuiCard-root::-webkit-scrollbar-thumb, .cardInfo::-webkit-scrollbar-thumb {
+  background-color: #6f0b6f; /* Color del scroll */
+  border-radius: 10px;
+}
+
+.MuiCard-root::-webkit-scrollbar-track, .cardInfo::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Color del fondo del scroll */
+}
+
+/* Estilo del título */
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem 0;
 }
 
 .imgCode {
-  display: inline-block;
-  margin-left: 15px;
-  padding-top: 10px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+/* Modal principal */
+.modal-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-images img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsividad */
+@media (max-width: 1100px) {
+  .MuiCard-root, .cardInfo {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 780px) {
+  .MuiCard-root, .cardInfo {
+    max-width: 200px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .projects-container {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #projects {
+    margin: 0 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .MuiCard-root, .cardInfo {
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .imgCode {
+    width: 50px;
+  }
+
+  .modal-images img {
+    width: 80px;
+  }
 }
